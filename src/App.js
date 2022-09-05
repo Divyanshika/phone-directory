@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import Header from './Header.js';
 import './App.css';
 class App extends Component{
+  deleteHandler(message)
+  {
+    alert(message)
+  }
   render() {
     let subscribers=[
       {
@@ -31,7 +35,7 @@ class App extends Component{
               <span className="grid-item name-heading">{sub.Name}</span>
                 <span className="grid-item phone-heading">{sub.Phone}</span>
                 <span className="grid-item action-btn-container">
-                  <button className="custom-btn delete-btn">Delete</button>
+                  <button className="custom-btn delete-btn" onClick={this.deleteHandler.bind(this,"Delete handler clicked")}>Delete</button>
                 </span>
                 </div>
             })
